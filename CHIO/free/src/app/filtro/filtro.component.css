@@ -1,0 +1,158 @@
+/* Estilos generales */
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 35vh; 
+    font-size: 15px;
+}
+
+.outer-container {
+    background-color: #346bb4;
+    padding: 1rem; 
+    border-radius: 10px; 
+    width: 100%; 
+}
+
+.content {
+    text-align: center; 
+    background-color: white; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 0rem 9.3rem; 
+    width: fit-content; 
+    max-width: 100%;
+    margin: 0 auto; 
+}
+
+@media screen and (max-width: 768px) {
+    .outer-container {
+        width: 100%;
+    }
+}
+
+/* Estilos del contenedor de filtros */
+.gray-container {
+    background-color: #6b86a3; /* Color de fondo */
+    padding: 0px; /* Relleno */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 100%; /* Ancho */
+    margin-top: -80px; /* Espacio superior */
+    display: flex; /* Flexbox para el posicionamiento */
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos del contenedor de filtros */
+.filter-container {
+    display: flex; /* Utiliza flexbox para el posicionamiento */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-left: auto; /* Mueve el contenedor a la derecha */
+    margin-left: 200px; /* Añade un poco de espacio entre el botón y el borde derecho */
+}
+
+/* Estilos de los botones */
+.search-button,
+.create-button {
+    background-color: #346bb4; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 8px 20px; /* Relleno */
+    cursor: pointer; /* Cursor */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.search-button:hover,
+.create-button:hover {
+    background-color: #2e5a9e; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos de la barra de búsqueda */
+.search-input,
+.text-input {
+    padding: 8px; /* Relleno */
+    border: 1px solid #6b86a3; /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 1px; /* Margen */
+    width: 200px; /* Ancho */
+}
+
+/* Estilos de la tabla */
+.table-container {
+    margin-top: 20px; /* Margen superior */
+    overflow-x: auto; /* Desplazamiento horizontal */
+    margin-left: 50px; /* Ajuste de la posición */
+}
+
+.user-table {
+    width: 100%; /* Ancho del 100% */
+    border-collapse: collapse; /* Sin espacios entre celdas */
+}
+
+.user-table th,
+.user-table td {
+    padding: 8px; /* Relleno */
+    text-align: center; /* Alineación centrada */
+    border: 1px solid #ddd; /* Borde */
+}
+
+.user-table th {
+    background-color: #f2f2f2; /* Color de fondo de las cabeceras */
+}
+
+/* Estilos del combo box */
+.combo-box-container {
+    position: relative; /* Posición relativa */
+    width: 200px; /* Ancho */
+}
+
+.combo-box {
+    width: 100%; /* Ancho */
+    padding: 8px 30px 8px 8px; /* Relleno */
+    border: 1px solid #6b86a3; /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    appearance: none; /* Sin estilo por defecto */
+    cursor: pointer; /* Cursor */
+}
+
+.combo-box-arrow {
+    position: absolute; /* Posición absoluta */
+    top: 50%; /* Alineación vertical */
+    right: 10px; /* Alineación a la derecha */
+    transform: translateY(-50%); /* Ajuste de la posición vertical */
+    pointer-events: none; /* Eventos de ratón desactivados */
+}
+/* Estilos de los campos de fecha */
+.date-input {
+    padding: 8px; /* Relleno */
+    border: 1px solid #6b86a3; /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 1px; /* Margen */
+    width: 200px; /* Ancho */
+}
+/* Estilos para la paginación */
+.pagination {
+    margin-top: 20px; /* Margen superior */
+    display: flex; /* Utiliza flexbox para el posicionamiento */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.pagination button {
+    background-color: #346bb4; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 16px; /* Relleno */
+    margin: 0 4px; /* Margen */
+    cursor: pointer; /* Cursor apuntador */
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+.pagination button:hover {
+    background-color: #2e5a9e; /* Cambio de color de fondo al pasar el ratón */
+}

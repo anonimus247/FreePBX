@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="outer-container">
+        <div class="content">
+            <h1>Filtros Llamadas</h1>
+        </div>
+    </div>
+</div>
+
+<div class="gray-container">
+    <div class="outergris-contenido">
+        <div class="contenido">
+            <div class="filter-container">
+                <!-- ComboBox de Estatus -->
+                <select class="combo-box" [(ngModel)]="selectedStatus" (change)="filterCalls()">
+                    <option value="">Todos</option>
+                    <option value="BUSY">Ocupado</option>
+                    <option value="NO ANSWER">Sin respuesta</option>
+                    <option value="ANSWERED">Contestado</option>
+                    <option value="FAILED">Fallido</option>
+                </select>
+
+                <!-- Campos de Fecha -->
+                <label for="" style="margin: 2px;color: white;">Origen</label>
+                <input type="date" [(ngModel)]="selectedStartDate" class="date-input" (change)="filterCalls()">
+                <label for="" style="margin: 2px;color: white;">Destino</label>
+                <input type="date" [(ngModel)]="selectedEndDate" class="date-input" (change)="filterCalls()">
+
+                <!-- Campo de Origen -->
+                <input type="text" [(ngModel)]="selectedSource" class="text-input" (keyup)="filterCalls()">
+                
+                <!-- Campo de Destino -->
+                <input type="text" [(ngModel)]="selectedDestination" class="text-input" (keyup)="filterCalls()">
+
+
+
+                <!-- ComboBox de Ciudad -->
+                <select class="combo-box" [(ngModel)]="selectedCity" (change)="filterCalls()">
+                    <option value="">Todas las ciudades</option>
+                    <option value="Los Mochis">Los Mochis</option>
+                    <option value="Monterrey">Monterrey</option>
+                    <option value="Zamora">Zamora</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table-container">
+    <table class="user-table">
+        <!-- Encabezados de la tabla -->
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Duración</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <!-- Filas de la tabla -->
+        <tbody>
+            <tr *ngFor="let call of displayedCalls">
+                <td>{{ call.calldate }}</td>
+                <td>{{ call.src }}</td>
+                <td>{{ call.dst }}</td>
+                <td>{{ call.duration }}</td>
+                <td>{{ call.disposition }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Controles de paginación -->
+    <div class="pagination">
+        <button (click)="previousPage()">Anterior</button>
+        <span>Página {{ currentPage }} de {{ pageCount() }}</span>
+        <button (click)="nextPage()">Siguiente</button>
+    </div>
+</div>

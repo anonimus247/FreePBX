@@ -1,0 +1,25 @@
+header {
+    background-color: #346bb4;
+    color: #fff;
+    padding: 12px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin-top: 0px;
+    border: 2px solid #000000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Reducir el ancho del menú de navegación /
+  }
+
+
+
+  .session-info {
+    margin-left: 10px; / Ajusta este valor según sea necesario */
+  }

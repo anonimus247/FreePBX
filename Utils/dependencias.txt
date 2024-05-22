@@ -1,0 +1,12 @@
+python -m venv venv
+
+venv\Scripts\activate
+
+uvicorn main:app --reload
+
+pip install fastapi
+pip install "uvicorn[standard]"
+
+pip freeze > requirements.txt                   (Para sacar los paquetes instalados y ponerlos en un archivo llamado (requirements.txt))
+pip install -r Utils/requirements.txt                 (Para instalar los paquetes de (requirements.txt))
+
